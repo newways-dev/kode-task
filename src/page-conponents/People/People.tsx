@@ -20,10 +20,12 @@ export const People = ({ people }: PeopleProps) => {
 
   const { sort } = useSelector(selectFilter)
 
-  const thisYear = people.filter(
-    (item) =>
-      Number(format(new Date(item.birthday), 'm')) > Number(currentMonth)
-  )
+  const thisYear =
+    people &&
+    people.filter(
+      (item) =>
+        Number(format(new Date(item.birthday), 'm')) > Number(currentMonth)
+    )
 
   const nextYear = people.filter(
     (item) =>

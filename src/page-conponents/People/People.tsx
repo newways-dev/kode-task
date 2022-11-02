@@ -36,8 +36,9 @@ export const People = ({ people }: PeopleProps) => {
 
   return (
     <div className={styles.people}>
-      {people.length === 0 && <NotFound />}
+      {people && people.length === 0 && <NotFound />}
       {sort === 0 &&
+        people &&
         people.map((item) => (
           <Link key={item.id} to={`/profile/${item.id}`}>
             <Card

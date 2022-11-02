@@ -27,10 +27,12 @@ export const People = ({ people }: PeopleProps) => {
         Number(format(new Date(item.birthday), 'm')) > Number(currentMonth)
     )
 
-  const nextYear = people.filter(
-    (item) =>
-      Number(format(new Date(item.birthday), 'm')) < Number(currentMonth)
-  )
+  const nextYear =
+    people &&
+    people.filter(
+      (item) =>
+        Number(format(new Date(item.birthday), 'm')) < Number(currentMonth)
+    )
 
   return (
     <div className={styles.people}>

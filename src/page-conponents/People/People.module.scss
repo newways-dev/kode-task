@@ -1,0 +1,31 @@
+.people {
+  padding-top: 22px;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  height: 100%;
+  overflow-y: scroll;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  .divider {
+    width: 100%;
+    display: flex;
+    padding: 0 24px;
+    align-items: center;
+    justify-content: space-between;
+
+    .line {
+      width: 40%;
+      height: 1px;
+      background: #c3c3c6;
+    }
+  }
+}

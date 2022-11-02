@@ -1,0 +1,79 @@
+.header {
+  height: 152px;
+  width: 100%;
+  border-bottom: 0.33px solid #c3c3c6;
+
+  @media screen and (max-width: 375px) {
+    height: 120px;
+  }
+
+  .wrapper {
+    width: 100%;
+    padding-top: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    height: 100%;
+    position: relative;
+
+    .title {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+
+      @media screen and (max-width: 375px) {
+        display: none;
+      }
+    }
+
+    .search {
+      margin-top: 18px;
+    }
+
+    .tabs {
+      width: 100%;
+      position: absolute;
+      bottom: 0px;
+    }
+  }
+}
+
+.offline,
+.loading {
+  color: #fff;
+
+  .wrapper {
+    padding-left: 16px;
+    background: var(--error);
+    height: 100px;
+
+    .title {
+      display: block;
+      padding-top: 8px;
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    .errorMessage {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
+
+  .tabs {
+    padding-top: 16px;
+    padding-left: 8px;
+    color: #fff;
+  }
+}
+
+.loading {
+  color: #fff;
+
+  .wrapper {
+    background: var(--active-primary);
+  }
+}

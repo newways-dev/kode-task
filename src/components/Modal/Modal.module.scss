@@ -1,0 +1,107 @@
+.modal {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(5, 5, 16, 0.16);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .card {
+    width: 373px;
+    height: 192px;
+    background: #fff;
+    position: relative;
+    color: var(--text-primary);
+    border-radius: 20px;
+
+    @media screen and (max-width: 375px) {
+      height: 95vh;
+      width: 100vw;
+      position: absolute;
+      bottom: 0;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+
+    .top {
+      display: flex;
+      align-items: center;
+      margin-top: 24px;
+      justify-content: center;
+      width: 100%;
+
+      .back {
+        display: none;
+        position: absolute;
+        left: 24px;
+        top: 24px;
+        cursor: pointer;
+
+        @media screen and (max-width: 375px) {
+          display: block;
+        }
+      }
+
+      .close {
+        position: absolute;
+        right: 24px;
+        top: 24px;
+        cursor: pointer;
+
+        @media screen and (max-width: 375px) {
+          display: none;
+        }
+      }
+
+      .title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+
+    .options {
+      margin-top: 35px;
+      padding-left: 18px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      .option {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .input {
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        border: 2px solid var(--active-primary);
+        outline: none;
+
+        &:checked {
+          border: 6px solid var(--active-primary);
+        }
+      }
+
+      .label {
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+}
